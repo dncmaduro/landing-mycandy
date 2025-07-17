@@ -16,3 +16,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, error: (error as Error).message }, { status: 500 });
   }
 }
+
+export async function GET() {
+  try {
+    const client = await clientPromise;
+    const db = client.db('data');
+    const collection = db.collection('landing-orders');
+
+    const result = await collection.find({}).toArray();
+
+    return NextResponse.json(result);
+  } catch (error) {
+    return NextResponse.json({ success: false, error: (error as Error).message }, { status: 500 });
+  }
+}
