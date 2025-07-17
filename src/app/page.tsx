@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
+import { OrderButton } from '@/components/OrderButton';
 import { PageCarousel } from '@/components/PageCarousel';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <PageCarousel />
+      <OrderButton />
     </div>
   );
 }
