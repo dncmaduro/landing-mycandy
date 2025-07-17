@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Controller, useForm } from 'react-hook-form';
-import send from '@/assets/images/send.png';
+import send from '@/assets/images/send.webp';
 import { useRouter } from 'next/navigation';
 
 interface FormType {

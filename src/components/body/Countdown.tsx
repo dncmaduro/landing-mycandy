@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import countdown from '@/assets/images/countdown.png';
+import countdown from '@/assets/images/countdown.webp';
 import Image from 'next/image';
 import { OrderButton } from '../OrderButton';
 

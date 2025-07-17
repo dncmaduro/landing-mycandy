@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Logo from '@/assets/images/Logo.png';
-import Chietkhau from '@/assets/images/Chietkhau.png';
-import Muangay from '@/assets/images/Muangay.png';
+import Logo from '@/assets/images/Logo.webp';
+import Chietkhau from '@/assets/images/Chietkhau.webp';
+import Muangay from '@/assets/images/Muangay.webp';
 import Image from 'next/image';
 
 export const Header = () => {

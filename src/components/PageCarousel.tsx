@@ -1,8 +1,8 @@
 'use client';
 
-import carousel1 from '@/assets/images/carousel1.png';
-import carousel2 from '@/assets/images/carousel2.png';
-import carousel3 from '@/assets/images/carousel3.png';
+import carousel1 from '@/assets/images/carousel1.webp';
+import carousel2 from '@/assets/images/carousel2.webp';
+import carousel3 from '@/assets/images/carousel3.webp';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import Image from 'next/image';
 import Autoplay from 'embla-carousel-autoplay';

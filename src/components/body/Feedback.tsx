@@ -1,10 +1,10 @@
 'use client';
 
-import fb1 from '@/assets/images/fb1.png';
-import fb2 from '@/assets/images/fb2.png';
-import fb3 from '@/assets/images/fb3.png';
-import fb4 from '@/assets/images/fb4.png';
-import fb5 from '@/assets/images/fb5.png';
+import fb1 from '@/assets/images/fb1.webp';
+import fb2 from '@/assets/images/fb2.webp';
+import fb3 from '@/assets/images/fb3.webp';
+import fb4 from '@/assets/images/fb4.webp';
+import fb5 from '@/assets/images/fb5.webp';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';

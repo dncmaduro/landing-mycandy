@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Home } from 'lucide-react';
-import thank from '@/assets/images/thankyou.png';
+import thank from '@/assets/images/thankyou.webp';
 
 export const Thankyou = () => {
   const router = useRouter();

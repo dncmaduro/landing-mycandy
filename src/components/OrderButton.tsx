@@ -1,6 +1,6 @@
 'use client';
 
-import orderButton from '@/assets/images/orderbutton.png';
+import orderButton from '@/assets/images/orderbutton.webp';
 import Image from 'next/image';
 
 interface Props {
