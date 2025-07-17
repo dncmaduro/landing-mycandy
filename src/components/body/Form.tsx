@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Controller, useForm } from 'react-hook-form';
 import send from '@/assets/images/send.png';
+import { useRouter } from 'next/navigation';
 
 interface FormType {
   fullName: string;
@@ -16,6 +17,7 @@ export const Form = () => {
   const { control, handleSubmit } = useForm<FormType>({
     defaultValues: {},
   });
+  const router = useRouter();
 
   const createOrder = async (data: FormType) => {
     await fetch('/api/order', {
@@ -23,6 +25,7 @@ export const Form = () => {
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
     });
+    router.push('/thankyou');
   };
 
   return (
