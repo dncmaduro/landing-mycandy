@@ -1,0 +1,29 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Logo from '@/assets/images/Logo.png';
+import Chietkhau from '@/assets/images/Chietkhau.png';
+import Muangay from '@/assets/images/Muangay.png';
+import Image from 'next/image';
+
+export const Header = () => {
+  const [showChietkhau, setShowChietkhau] = useState(true);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setShowChietkhau((prev) => !prev);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="h-[85px] w-full flex items-center justify-between bg-gradient-to-r px-4 from-[#a5d4f8] to-[#007edd]">
+      <Image src={Logo.src} alt="Logo" width={100} height={100} />
+      {showChietkhau ? (
+        <Image src={Chietkhau.src} alt="Chietkhau" width={260} height={260} className="ml-auto" />
+      ) : (
+        <Image src={Muangay.src} alt="Muangay" width={260} height={260} className="ml-auto" />
+      )}
+    </div>
+  );
+};
