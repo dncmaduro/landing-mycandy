@@ -17,7 +17,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="h-[85px] w-full flex items-center justify-between bg-gradient-to-r px-4 from-[#a5d4f8] to-[#007edd]">
+    <div className="sticky top-0 z-50 flex h-[85px] w-full items-center justify-between bg-gradient-to-r from-[#a5d4f8] to-[#007edd] px-4 shadow-lg/10">
       <Image src={Logo.src} alt="Logo" width={100} height={100} />
       {showChietkhau ? (
         <Image src={Chietkhau.src} alt="Chietkhau" width={260} height={260} className="ml-auto" />
