@@ -13,14 +13,23 @@ interface FormType {
 }
 
 export const Form = () => {
-  const { control } = useForm<FormType>({
+  const { control, handleSubmit } = useForm<FormType>({
     defaultValues: {},
   });
+
+  const createOrder = async (data: FormType) => {
+    await fetch('/api/order', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    });
+  };
 
   return (
     <form
       id="form"
       className="mx-auto flex w-[85%] scroll-mt-[90px] flex-col items-center gap-3 pt-8"
+      onSubmit={handleSubmit(createOrder)}
     >
       <Controller
         control={control}
