@@ -18,7 +18,10 @@ export const Form = () => {
   });
 
   return (
-    <form className="mx-auto flex w-[85%] flex-col items-center gap-3 pt-8">
+    <form
+      id="form"
+      className="mx-auto flex w-[85%] scroll-mt-[90px] flex-col items-center gap-3 pt-8"
+    >
       <Controller
         control={control}
         name="fullName"
