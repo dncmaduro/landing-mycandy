@@ -16,7 +16,12 @@ interface FormType {
 }
 
 export const Form = () => {
-  const { control, handleSubmit, reset } = useForm<FormType>({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormType>({
     defaultValues: {},
   });
   const router = useRouter();
@@ -60,6 +65,7 @@ export const Form = () => {
         <Controller
           control={control}
           name="fullName"
+          rules={{ required: 'Vui lòng nhập họ tên' }}
           render={({ field }) => (
             <div className="flex w-full flex-col gap-0.75 font-bold">
               <label className="ml-2 text-sm text-white uppercase">Họ và tên:</label>
@@ -70,12 +76,16 @@ export const Form = () => {
                   className="h-7 w-full rounded-full bg-white pl-3 text-sm shadow shadow-2xl"
                 />
               </div>
+              {errors.fullName && (
+                <span className="ml-3 text-xs text-orange-300">{errors.fullName.message}</span>
+              )}
             </div>
           )}
         />
         <Controller
           control={control}
           name="phoneNumber"
+          rules={{ required: 'Vui lòng nhập số điện thoại' }}
           render={({ field }) => (
             <div className="flex w-full flex-col gap-0.75 font-bold">
               <label className="ml-2 text-sm text-white uppercase">Số điện thoại:</label>
@@ -87,6 +97,9 @@ export const Form = () => {
                   className="h-7 w-full rounded-full bg-white pl-3 text-sm shadow shadow-2xl"
                 />
               </div>
+              {errors.phoneNumber && (
+                <span className="ml-3 text-xs text-orange-300">{errors.phoneNumber.message}</span>
+              )}
             </div>
           )}
         />
@@ -111,6 +124,7 @@ export const Form = () => {
         <Controller
           control={control}
           name="quantity"
+          rules={{ required: 'Vui lòng nhập số lượng đặt hàng' }}
           render={({ field }) => (
             <div className="flex w-full flex-col gap-0.75 font-bold">
               <label className="ml-2 text-sm text-white uppercase">
@@ -124,12 +138,16 @@ export const Form = () => {
                   className="h-7 w-full rounded-full bg-white pl-3 text-sm shadow shadow-lg"
                 />
               </div>
+              {errors.quantity && (
+                <span className="ml-3 text-xs text-orange-300">{errors.quantity.message}</span>
+              )}
             </div>
           )}
         />
         <Controller
           control={control}
           name="address"
+          rules={{ required: 'Vui lòng nhập địa chỉ' }}
           render={({ field }) => (
             <div className="flex w-full flex-col gap-0.75 font-bold">
               <label className="ml-2 text-sm text-white uppercase">Địa chỉ:</label>
@@ -140,6 +158,9 @@ export const Form = () => {
                   className="h-7 w-full rounded-full bg-white pl-3 text-sm shadow shadow-lg"
                 />
               </div>
+              {errors.address && (
+                <span className="ml-3 text-xs text-orange-300">{errors.address.message}</span>
+              )}
             </div>
           )}
         />
