@@ -7,7 +7,11 @@ export async function POST(req: NextRequest) {
     const client = await clientPromise;
     const db = client.db('data');
     const collection = db.collection('landing-orders');
-    const result = await collection.insertOne(data);
+    const dataWithTimestamp = {
+      ...data,
+      created_at: new Date(),
+    };
+    const result = await collection.insertOne(dataWithTimestamp);
     return NextResponse.json({ success: true, insertedId: result.insertedId });
   } catch (error) {
     return NextResponse.json({ success: false, error: (error as Error).message }, { status: 500 });
