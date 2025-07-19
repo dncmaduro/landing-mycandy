@@ -14,12 +14,12 @@ export const Feedback = () => {
   const autoplay = Autoplay({ delay: 5000, stopOnInteraction: false });
 
   return (
-    <div className="flex flex-col gap-1">
+    <section className="flex flex-col gap-1">
       <div className="h-1 w-full bg-white"></div>
       <div className="flex w-full items-center justify-center bg-white py-4">
-        <span className="text-center text-xl font-black text-[#ff3f00] uppercase">
-          Feedback của khách hàng
-        </span>
+        <h2 className="text-center text-xl font-black text-[#ff3f00] uppercase">
+          Feedback của khách hàng về bánh trứng chảy MyCandy
+        </h2>
       </div>
       <div className="h-1 w-full bg-white"></div>
       <Carousel
@@ -50,6 +50,6 @@ export const Feedback = () => {
           ))}
         </CarouselContent>
       </Carousel>
-    </div>
+    </section>
   );
 };

@@ -9,10 +9,15 @@ export default function Home() {
   return (
     <div className="h-screen items-center justify-items-center gap-16 bg-white font-sans">
       <Header />
-      <Hero />
-      <PageCarousel />
-      <OrderButton />
-      <Body />
+      <main>
+        <h1 className="sr-only">Bánh Trứng Chảy MyCandy Việt Nam - Đặt Hàng Online Chính Hãng</h1>
+        <Hero />
+        <section aria-label="Hình ảnh sản phẩm bánh trứng chảy">
+          <PageCarousel />
+        </section>
+        <OrderButton />
+        <Body />
+      </main>
       <Footer />
     </div>
   );
